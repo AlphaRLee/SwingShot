@@ -1,0 +1,9 @@
+name: SwingShot
+version: 1.0
+author: RLee
+main: io.github.alpharlee.swingshot.Main
+api-version: 1.13
+commands:
+  swingshot:
+    description: Base command for SwingShot plugin
+    aliases: [ss]
