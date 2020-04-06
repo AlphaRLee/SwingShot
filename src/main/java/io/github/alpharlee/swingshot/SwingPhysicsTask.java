@@ -2,8 +2,11 @@ package io.github.alpharlee.swingshot;
 
 import net.md_5.bungee.api.ChatColor;
 import org.bukkit.Location;
+import org.bukkit.Material;
 import org.bukkit.Particle;
+import org.bukkit.block.data.BlockData;
 import org.bukkit.entity.Player;
+import org.bukkit.inventory.ItemStack;
 import org.bukkit.util.Vector;
 
 public class SwingPhysicsTask {
@@ -163,8 +166,12 @@ public class SwingPhysicsTask {
 				.normalize().multiply(particleDistance);
 		Location particleLocation = getPlayerSwingLocation().add(particleDirection);
 
+		ItemStack lineParticleData = new ItemStack(Material.OBSIDIAN);
+//		BlockData lineParticleData = Material.OBSIDIAN.createBlockData();
 		while (lineDistance < maxLineDistance) {
-			player.getWorld().spawnParticle(Particle.WATER_BUBBLE, particleLocation, 1);
+//			player.getWorld().spawnParticle(Particle.CRIT, particleLocation, 1);
+//			player.getWorld().spawnParticle(Particle.ITEM_CRACK, particleLocation, 1, 0, 0, 0, 0, lineParticleData, true);
+			player.getWorld().spawnParticle(Particle.SUSPENDED, particleLocation, 1, 0, 0, 0, 0, null, true);
 
 			particleLocation.add(particleDirection);
 			lineDistance += particleDistance;
