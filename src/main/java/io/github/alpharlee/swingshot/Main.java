@@ -92,8 +92,8 @@ public class Main extends JavaPlugin {
 					SwingPhysicsTask.linearVelocityMultiplier = Double.parseDouble(args[2]);
 					sender.sendMessage("!!! linear velocity multiplier of " + args[2] + " applied");
 				} else {
-					SwingPhysicsTask.linearVelocityMultiplier = 0.5;
-					sender.sendMessage("!!! Default linear velocity multiplier of 0.5 applied");
+					SwingPhysicsTask.linearVelocityMultiplier = 0.85;
+					sender.sendMessage("!!! Default linear velocity multiplier of 0.85 applied");
 				}
 
 				break;
